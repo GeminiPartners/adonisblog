@@ -1,0 +1,42 @@
+##################
+classroom/add_with_students post
+
+{ "class_name":"Class A",
+
+	"students": [{
+ 
+		"student_name":"John Doe" },
+
+		{ "student_name":"Jane Doe" },
+
+		{ "student_name":"Doe Doel" }
+
+		]
+ 
+}
+
+###################
+classroom post, put
+
+{
+	"class_name":"Geology"
+}
+
+
+lecturer/add_with_course post
+
+{ "lecturer_name":"Jamie Kennedy",
+
+	"course": {"course_name":"Civics" }
+ 
+}
+
+
+####################
+http://localhost:3000/api/student/add_course
+{
+	"student_id":1,
+
+	"course_id":1
+
+}

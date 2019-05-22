@@ -1,0 +1,32 @@
+secure object model
+https://github.com/didinj/secure-node-express-postgresql-passport.git
+Explanation: https://www.djamware.com/post/5bf94d9a80aca747f4b9ce9f/secure-nodejs-expressjs-and-postgresql-api-using-passportjs 
+
+http://localhost:3000/api/signin
+{
+	"username":"dbf@example.com",
+	"password":"qqqq1111"
+}
+
+returns:
+{
+    "success": true,
+    "token": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJkYmZAZXhhbXBsZS5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCQxRVUub2tOTzR4WTg3VEVZSjNJYTJlMXVnbkZhU25TOGZkVnlQZ2guZkZrNXBKdjVSYWlTQyIsImNyZWF0ZWRBdCI6IjIwMTktMDUtMThUMTc6NTE6MDcuOTE3WiIsInVwZGF0ZWRBdCI6IjIwMTktMDUtMThUMTc6NTE6MDcuOTE3WiIsImlhdCI6MTU1ODIwMTk5NSwiZXhwIjoxNTYwNzkzOTk1fQ.j2EcHQBXNVh8UQia8Sktga87g1GttzacmmkMT3GJ8rI"
+}
+
+Add the token to header responses:
+Authorization: token
+Content-Type: application/json
+
+##########################################
+
+restful api
+https://github.com/didinj/node-express-postgresql-sequelize.git
+explanation:
+https://www.djamware.com/post/5bf94d9a80aca747f4b9ce9f/secure-nodejs-expressjs-and-postgresql-api-using-passportjs
+
+Make sure you have install and run PostgreSQL server
+Create database with the name same as in config file
+Run npm install or yarn install
+Run sequelize db:migrate
+Run nodemon or npm start

@@ -1,0 +1,35 @@
+User - 
+	name VARCHAR(255) required
+	email VARCHAR(255) required
+	role - 
+		0 - User (default)
+		1 - Power User
+		2 - Admin
+	location: VARCHAR(255)
+	instructions_default: TEXT
+
+	Item(s)
+		name VARCHAR(255)
+		category_id INT
+		desc String
+		default_inst_suppres: BOOL
+		instructions: TEXT
+
+Community
+	name VARCHAR(255) required
+	desc STRING
+	type -
+		0 - Church
+		1 - Neighborhood
+		3 - Club	
+		10 - Other
+	other-name VARCHAR(255)
+	
+	ItemCategory(ies)
+		name VARCHAR(255)
+		order
+
+User-Community (role)
+ItemCategory - ItemI
+
+

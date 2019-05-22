@@ -1,0 +1,357 @@
+﻿dbfur@DESKTOP-C5HC6GR MINGW64 ~
+$ ssh -i id_rsa root@157.230.188.85
+
+Warning: Identity file id_rsa not accessible: No such file or directory.
+The authenticity of host '159.89.237.199 (159.89.237.199)' can't be established.
+ECDSA key fingerprint is SHA256:e9lTGTyhBFdJChzYCjlyJpzAM2TV6RlPrsLo1K+zJoo.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '159.89.237.199' (ECDSA) to the list of known hosts.
+Enter passphrase for key '/c/Users/dbfur/.ssh/id_rsa':
+Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-36-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat May 11 21:24:17 UTC 2019
+
+  System load:  0.11              Processes:           84
+  Usage of /:   6.1% of 24.06GB   Users logged in:     0
+  Memory usage: 12%               IP address for eth0: 159.89.237.199
+  Swap usage:   0%
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+********************************************************************************
+
+Welcome to DigitalOcean's One-Click Node.js Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+
+To get started, visit http://do.co/node1804
+
+********************************************************************************
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+root@communitydroplet:~# cd /
+root@communitydroplet:/# ls
+bin   home            lib64       opt   sbin  tmp      vmlinuz.old
+boot  initrd.img      lost+found  proc  snap  usr
+dev   initrd.img.old  media       root  srv   var
+etc   lib             mnt         run   sys   vmlinuz
+root@communitydroplet:/# apt update
+Hit:1 http://mirrors.digitalocean.com/ubuntu bionic InRelease
+Get:2 http://mirrors.digitalocean.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:5 https://deb.nodesource.com/node_6.x bionic InRelease [4622 B]
+Get:6 http://mirrors.digitalocean.com/ubuntu bionic/multiverse Sources [181 kB]
+Get:7 http://mirrors.digitalocean.com/ubuntu bionic/restricted Sources [5324 B]
+Get:8 http://mirrors.digitalocean.com/ubuntu bionic/universe Sources [9051 kB]
+Get:9 http://mirrors.digitalocean.com/ubuntu bionic/main Sources [829 kB]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/universe Sources [129 kB]
+Get:11 http://mirrors.digitalocean.com/ubuntu bionic-updates/universe Sources [237 kB]
+Get:12 http://security.ubuntu.com/ubuntu bionic-security/restricted Sources [1504 B]
+Get:13 http://security.ubuntu.com/ubuntu bionic-security/multiverse Sources [2744 B]
+Get:14 http://mirrors.digitalocean.com/ubuntu bionic-updates/restricted Sources [2068 B]
+Get:15 http://mirrors.digitalocean.com/ubuntu bionic-updates/multiverse Sources [4612 B]
+Get:16 http://security.ubuntu.com/ubuntu bionic-security/main Sources [87.5 kB]
+Get:17 http://mirrors.digitalocean.com/ubuntu bionic-updates/main Sources [265 kB]
+Get:18 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 Packages [598 kB]
+Get:19 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [334 kB]
+Get:20 http://mirrors.digitalocean.com/ubuntu bionic-updates/main Translation-en [220 kB]
+Get:21 http://mirrors.digitalocean.com/ubuntu bionic-updates/restricted amd64 Packages [6996 B]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [120 kB]
+Get:23 http://mirrors.digitalocean.com/ubuntu bionic-updates/restricted Translation-en [3076 B]
+Get:24 http://mirrors.digitalocean.com/ubuntu bionic-updates/universe amd64 Packages [930 kB]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [4296 B]
+Get:26 http://mirrors.digitalocean.com/ubuntu bionic-updates/universe Translation-en [270 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [2192 B]
+Get:28 http://mirrors.digitalocean.com/ubuntu bionic-updates/multiverse amd64 Packages [6636 B]
+Get:29 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [242 kB]
+Get:30 http://mirrors.digitalocean.com/ubuntu bionic-updates/multiverse Translation-en [3556 B]
+Get:31 http://mirrors.digitalocean.com/ubuntu bionic-backports/main Sources [984 B]
+Get:32 http://mirrors.digitalocean.com/ubuntu bionic-backports/universe Sources [2068 B]
+Get:33 http://mirrors.digitalocean.com/ubuntu bionic-backports/main amd64 Packages [1024 B]
+Get:34 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [139 kB]
+Get:35 http://mirrors.digitalocean.com/ubuntu bionic-backports/main Translation-en [448 B]
+Get:36 http://mirrors.digitalocean.com/ubuntu bionic-backports/universe amd64 Packages [3492 B]
+Get:37 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [4008 B]
+Get:38 http://mirrors.digitalocean.com/ubuntu bionic-backports/universe Translation-en [1604 B]
+Get:39 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [2060 B]
+Fetched 13.9 MB in 3s (5345 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+232 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@communitydroplet:/# apt install nginx
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+  libjpeg-turbo8 libjpeg8 libnginx-mod-http-geoip
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libtiff5 libwebp6 libxpm4 nginx-common
+  nginx-core
+Suggested packages:
+  libgd-tools fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0
+  libjpeg-turbo8 libjpeg8 libnginx-mod-http-geoip
+  libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libtiff5 libwebp6 libxpm4 nginx
+  nginx-common nginx-core
+0 upgraded, 18 newly installed, 0 to remove and 232 not upgraded.
+Need to get 2461 kB of archives.
+After this operation, 8194 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.1 [110 kB]
+Get:2 http://mirrors.digitalocean.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1041 kB]
+Get:3 http://mirrors.digitalocean.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
+Get:5 http://mirrors.digitalocean.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194 B]
+Get:6 http://mirrors.digitalocean.com/ubuntu bionic/main amd64 libjbig0 amd64 2.1-3.1build1 [26.7 kB]
+Get:7 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libtiff5 amd64 4.0.9-5ubuntu0.2 [153 kB]
+Get:8 http://mirrors.digitalocean.com/ubuntu bionic/main amd64 libwebp6 amd64 0.6.1-2 [185 kB]
+Get:9 http://mirrors.digitalocean.com/ubuntu bionic/main amd64 libxpm4 amd64 1:3.5.12-1 [34.0 kB]
+Get:10 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libgd3 amd64 2.2.5-4ubuntu0.3 [119 kB]
+Get:11 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 nginx-common all 1.14.0-0ubuntu1.2 [37.4 kB]
+Get:12 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libnginx-mod-http-geoip amd64 1.14.0-0ubuntu1.2 [11.2 kB]
+Get:13 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libnginx-mod-http-image-filter amd64 1.14.0-0ubuntu1.2 [14.5 kB]
+Get:14 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.14.0-0ubuntu1.2 [13.0 kB]
+Get:15 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libnginx-mod-mail amd64 1.14.0-0ubuntu1.2 [41.8 kB]
+Get:16 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 libnginx-mod-stream amd64 1.14.0-0ubuntu1.2 [63.6 kB]
+Get:17 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 nginx-core amd64 1.14.0-0ubuntu1.2 [413 kB]
+Get:18 http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 nginx all 1.14.0-0ubuntu1.2 [3596 B]
+Fetched 2461 kB in 0s (6293 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+(Reading database ... 100611 files and directories currently installed.)
+Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../01-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../02-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
+Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../03-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../05-libjbig0_2.1-3.1build1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1build1) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../06-libtiff5_4.0.9-5ubuntu0.2_amd64.deb ...
+Unpacking libtiff5:amd64 (4.0.9-5ubuntu0.2) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../07-libwebp6_0.6.1-2_amd64.deb ...
+Unpacking libwebp6:amd64 (0.6.1-2) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../09-libgd3_2.2.5-4ubuntu0.3_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.5-4ubuntu0.3) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../10-nginx-common_1.14.0-0ubuntu1.2_all.deb ...
+Unpacking nginx-common (1.14.0-0ubuntu1.2) ...
+Selecting previously unselected package libnginx-mod-http-geoip.
+Preparing to unpack .../11-libnginx-mod-http-geoip_1.14.0-0ubuntu1.2_amd64.deb ...
+Unpacking libnginx-mod-http-geoip (1.14.0-0ubuntu1.2) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../12-libnginx-mod-http-image-filter_1.14.0-0ubuntu1.2_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.14.0-0ubuntu1.2) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../13-libnginx-mod-http-xslt-filter_1.14.0-0ubuntu1.2_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.14.0-0ubuntu1.2) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../14-libnginx-mod-mail_1.14.0-0ubuntu1.2_amd64.deb ...
+Unpacking libnginx-mod-mail (1.14.0-0ubuntu1.2) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../15-libnginx-mod-stream_1.14.0-0ubuntu1.2_amd64.deb ...
+Unpacking libnginx-mod-stream (1.14.0-0ubuntu1.2) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../16-nginx-core_1.14.0-0ubuntu1.2_amd64.deb ...
+Unpacking nginx-core (1.14.0-0ubuntu1.2) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../17-nginx_1.14.0-0ubuntu1.2_all.deb ...
+Unpacking nginx (1.14.0-0ubuntu1.2) ...
+Processing triggers for ufw (0.35-5) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Setting up libjbig0:amd64 (2.1-3.1build1) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up nginx-common (1.14.0-0ubuntu1.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Processing triggers for systemd (237-3ubuntu10.3) ...
+Setting up libnginx-mod-mail (1.14.0-0ubuntu1.2) ...
+Setting up libxpm4:amd64 (1:3.5.12-1) ...
+Processing triggers for man-db (2.8.3-2) ...
+Setting up libnginx-mod-http-xslt-filter (1.14.0-0ubuntu1.2) ...
+Setting up libnginx-mod-http-geoip (1.14.0-0ubuntu1.2) ...
+Setting up libwebp6:amd64 (0.6.1-2) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Setting up fontconfig-config (2.12.6-0ubuntu2) ...
+Setting up libnginx-mod-stream (1.14.0-0ubuntu1.2) ...
+Setting up libtiff5:amd64 (4.0.9-5ubuntu0.2) ...
+Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+Setting up libgd3:amd64 (2.2.5-4ubuntu0.3) ...
+Setting up libnginx-mod-http-image-filter (1.14.0-0ubuntu1.2) ...
+Setting up nginx-core (1.14.0-0ubuntu1.2) ...
+Setting up nginx (1.14.0-0ubuntu1.2) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Processing triggers for ufw (0.35-5) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+root@communitydroplet:/# ufw app list
+Available applications:
+  Nginx Full
+  Nginx HTTP
+  Nginx HTTPS
+  OpenSSH
+root@communitydroplet:/# ufw allow 'Nginx HTTP'
+Rule added
+Rule added (v6)
+root@communitydroplet:/# ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     LIMIT       Anywhere
+80/tcp                     ALLOW       Anywhere
+443/tcp                    ALLOW       Anywhere
+Nginx HTTP                 ALLOW       Anywhere
+22/tcp (v6)                LIMIT       Anywhere (v6)
+80/tcp (v6)                ALLOW       Anywhere (v6)
+443/tcp (v6)               ALLOW       Anywhere (v6)
+Nginx HTTP (v6)            ALLOW       Anywhere (v6)
+
+root@communitydroplet:/# systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: en
+   Active: active (running) since Sat 2019-05-11 21:30:27 UTC; 2min 45s ago
+     Docs: man:nginx(8)
+  Process: 2098 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code
+  Process: 2087 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process
+ Main PID: 2103 (nginx)
+    Tasks: 2 (limit: 1152)
+   CGroup: /system.slice/nginx.service
+           ├─2103 nginx: master process /usr/sbin/nginx -g daemon on; master_pro
+           └─2104 nginx: worker process
+
+May 11 21:30:27 communitydroplet systemd[1]: Starting A high performance web ser
+May 11 21:30:27 communitydroplet systemd[1]: nginx.service: Failed to parse PID
+May 11 21:30:27 communitydroplet systemd[1]: Started A high performance web serv
+lines 1-15/15 (END)
+root@communitydroplet:/# mkdir -p ~/.ssh
+root@communitydroplet:/# ls
+bin   home            lib64       opt   sbin  tmp      vmlinuz.old
+boot  initrd.img      lost+found  proc  snap  usr
+dev   initrd.img.old  media       root  srv   var
+etc   lib             mnt         run   sys   vmlinuz
+root@communitydroplet:/# cd .ssh
+-bash: cd: .ssh: No such file or directory
+root@communitydroplet:/# mkdir -p ~/.ssh
+root@communitydroplet:/# cd .ssh
+-bash: cd: .ssh: No such file or directory
+root@communitydroplet:/# cd /.ssh
+-bash: cd: /.ssh: No such file or directory
+root@communitydroplet:/# ls -a
+.    boot  home            lib         media  proc  sbin  sys  var
+..   dev   initrd.img      lib64       mnt    root  snap  tmp  vmlinuz
+bin  etc   initrd.img.old  lost+found  opt    run   srv   usr  vmlinuz.old
+root@communitydroplet:/# x
+x: command not found
+root@communitydroplet:/# ^C
+root@communitydroplet:/# esc
+
+Command 'esc' not found, but there are 17 similar ones.
+
+root@communitydroplet:/# help
+GNU bash, version 4.4.19(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                            history [-c] [-d offset] [n] or hist>
+ (( expression ))                        if COMMANDS; then COMMANDS; [ elif C>
+ . filename [arguments]                  jobs [-lnprs] [jobspec ...] or jobs >
+ :                                       kill [-s sigspec | -n signum | -sigs>
+ [ arg... ]                              let arg [arg ...]
+ [[ expression ]]                        local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]          logout [n]
+ bg [job_spec ...]                       mapfile [-d delim] [-n count] [-O or>
+ bind [-lpsvPSVX] [-m keymap] [-f file>  popd [-n] [+N | -N]
+ break [n]                               printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]       pushd [-n] [+N | -N | dir]
+ caller [expr]                           pwd [-LP]
+ case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->
+ cd [-L|[-P [-e]] [-@]] [dir]            readarray [-n count] [-O origin] [-s>
+ command [-pVv] command [arg ...]        readonly [-aAf] [name[=value] ...] o>
+ compgen [-abcdefgjksuv] [-o option] [>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] >  select NAME [in WORDS ... ;] do COMM>
+ compopt [-o|+o option] [-DE] [name ..>  set [-abefhkmnptuvxBCHP] [-o option->
+ continue [n]                            shift [n]
+ coproc [NAME] command [redirections]    shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=v>  source filename [arguments]
+ dirs [-clpv] [+N] [-N]                  suspend [-f]
+ disown [-h] [-ar] [jobspec ... | pid >  test [expr]
+ echo [-neE] [arg ...]                   time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [na>  times
+ eval [arg ...]                          trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [argume>  true
+ exit [n]                                type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or ex>  typeset [-aAfFgilnrtux] [-p] name[=v>
+ false                                   ulimit [-SHabcdefiklmnpqrstuvxPT] [l>
+ fc [-e ename] [-lnr] [first] [last] o>  umask [-p] [-S] [mode]
+ fg [job_spec]                           unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMAND>  unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMAN>  until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name >  variables - Names and meanings of so>
+ getopts optstring name [arg]            wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name >  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]               { COMMANDS ; }
+root@communitydroplet:/# exit
+logout
+Connection to 159.89.237.199 closed.
+
+dbfur@DESKTOP-C5HC6GR MINGW64 ~
+$ ssh dbfurches@159.89.237.199
+dbfurches@159.89.237.199: Permission denied (publickey).
+
+dbfur@DESKTOP-C5HC6GR MINGW64 ~
+$ ssh-copy-id dbfurches@159.89.237.199
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/c/Users/dbfur/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+dbfurches@159.89.237.199: Permission denied (publickey).
+
+dbfur@DESKTOP-C5HC6GR MINGW64 ~
+$ cat ~/.ssh/id_rsa.pub | ssh dbfurches@159.89.237.199 "mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys && chmod -R go= ~/.ssh && cat >> ~/.ssh/authorized_keys"
+dbfurches@159.89.237.199: Permission denied (publickey).
+
+dbfur@DESKTOP-C5HC6GR MINGW64 ~
+$ ^C
+
+dbfur@DESKTOP-C5HC6GR MINGW64 ~
+$

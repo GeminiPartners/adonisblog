@@ -1,0 +1,206 @@
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects (master)
+$ dir
+DestroyTheWorld  SaveKittens  web\ server\ stuff
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects (master)
+$ dir
+binding  DestroyTheWorld  SaveKittens  web\ server\ stuff
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects (master)
+$ cd binding
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git init
+Initialized empty Git repository in D:/projects/binding/.git/
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git add -A
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git commit -m'First Commit'
+[master (root-commit) e69bd5d] First Commit
+ 2 files changed, 39 insertions(+)
+ create mode 100644 calc.js
+ create mode 100644 index.html
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git remote -v
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git remote add origin geminipartners@bitbucket.org/geminipartners/calcremote.git
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git remote -v
+origin  geminipartners@bitbucket.org/geminipartners/calcremote.git (fetch)
+origin  geminipartners@bitbucket.org/geminipartners/calcremote.git (push)
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git add -A
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ ls
+calc.js  index.html
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ git pull origin master
+fatal: 'geminipartners@bitbucket.org/geminipartners/calcremote.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/binding (master)
+$ cd ../
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects (master)
+$ mkdir new-binding
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects (master)
+$ git clone https://geminipartners@bitbucket.org/geminipartners/calcremote.git
+Cloning into 'calcremote'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        DestroyTheWorld/
+        SaveKittens/
+        binding/
+        calcremote/
+        web server stuff/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects (master)
+$ cd new-binding
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding (master)
+$ git clone https://geminipartners@bitbucket.org/geminipartners/calcremote.git
+Cloning into 'calcremote'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ../DestroyTheWorld/
+        ../SaveKittens/
+        ../binding/
+        ../calcremote/
+        ./
+        ../web server stuff/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding (master)
+$ dir
+calcremote
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding (master)
+$ cd calcremote
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ dir
+README.md
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git add -A
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   calc.js
+        new file:   index.html
+
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git remote -v
+origin  https://geminipartners@bitbucket.org/geminipartners/calcremote.git (fetch)
+origin  https://geminipartners@bitbucket.org/geminipartners/calcremote.git (push)
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git pull origin master
+From https://bitbucket.org/geminipartners/calcremote
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git push origin master
+Everything up-to-date
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git add -A
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git commit -m 'First Commit'
+[master 9d923d8] First Commit
+ 2 files changed, 39 insertions(+)
+ create mode 100644 calc.js
+ create mode 100644 index.html
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 880 bytes | 220.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://bitbucket.org/geminipartners/calcremote.git
+   8bc212e..9d923d8  master -> master
+
+dbfur@DESKTOP-C5HC6GR MINGW64 /d/projects/new-binding/calcremote (master)

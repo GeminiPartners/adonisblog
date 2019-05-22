@@ -1,0 +1,16 @@
+﻿root@communitydroplet:/var/www/html# git clone https://geminipartners@bitbucket.org/geminipartners/calcremote.git
+Cloning into 'calcremote'...
+Password for 'https://geminipartners@bitbucket.org':
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (7/7), done.
+root@communitydroplet:/var/www/html# ls
+calcremote  index.nginx-debian.html
+root@communitydroplet:/var/www/html# (sudo) service nginx restart
+-bash: syntax error near unexpected token `service'
+root@communitydroplet:/var/www/html#
+root@communitydroplet:/var/www/html#
+root@communitydroplet:/var/www/html# sudo systemctl restart nginx
+root@communitydroplet:/var/www/html# ^C
+root@communitydroplet:/var/www/html#
