@@ -29,6 +29,11 @@ class AuthController {
         output.status           =   2;
         return output;
     }
+
+    async logout({ auth, response }){
+        await auth.logout();
+        response.redirect( '/' );
+    }
 };
 
 module.exports = AuthController

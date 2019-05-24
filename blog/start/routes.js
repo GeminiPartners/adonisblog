@@ -18,4 +18,5 @@ const Route = use('Route')
 
 Route.on('/').render('home')
 Route.on('/login').render( 'auth' );
-Route.post('/login', 'AuthController.auth')
+Route.post('/login', 'AuthController.auth');
+Route.get( '/logout', 'AuthController.logout' );
