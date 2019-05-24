@@ -16,7 +16,7 @@ module.exports = {
   | interacting with SQL databases.
   |
   */
-  connection: Env.get('DB_CONNECTION', 'sqlite'),
+  connection: 'pg',
 
   /*
   |--------------------------------------------------------------------------
@@ -29,34 +29,34 @@ module.exports = {
   | npm i --save sqlite3
   |
   */
-  sqlite: {
-    client: 'sqlite3',
-    connection: {
-      filename: Helpers.databasePath(`${Env.get('DB_DATABASE', 'development')}.sqlite`)
-    },
-    useNullAsDefault: true
-  },
+  // sqlite: {
+  //   client: 'sqlite3',
+  //   connection: {
+  //     filename: Helpers.databasePath(`${Env.get('DB_DATABASE', 'development')}.sqlite`)
+  //   },
+  //   useNullAsDefault: true
+  // },
 
-  /*
-  |--------------------------------------------------------------------------
-  | MySQL
-  |--------------------------------------------------------------------------
-  |
-  | Here we define connection settings for MySQL database.
-  |
-  | npm i --save mysql
-  |
-  */
-  mysql: {
-    client: 'mysql',
-    connection: {
-      host: Env.get('DB_HOST', 'localhost'),
-      port: Env.get('DB_PORT', ''),
-      user: Env.get('DB_USER', 'root'),
-      password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis')
-    }
-  },
+  // /*
+  // |--------------------------------------------------------------------------
+  // | MySQL
+  // |--------------------------------------------------------------------------
+  // |
+  // | Here we define connection settings for MySQL database.
+  // |
+  // | npm i --save mysql
+  // |
+  // */
+  // mysql: {
+  //   client: 'mysql',
+  //   connection: {
+  //     host: Env.get('DB_HOST', 'localhost'),
+  //     port: Env.get('DB_PORT', ''),
+  //     user: Env.get('DB_USER', 'root'),
+  //     password: Env.get('DB_PASSWORD', ''),
+  //     database: Env.get('DB_DATABASE', 'adonis')
+  //   }
+  // },
 
   /*
   |--------------------------------------------------------------------------
@@ -72,10 +72,10 @@ module.exports = {
     client: 'pg',
     connection: {
       host: Env.get('DB_HOST', 'localhost'),
-      port: Env.get('DB_PORT', ''),
-      user: Env.get('DB_USER', 'root'),
-      password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis')
+      port: Env.get('DB_PORT', '5432'),
+      user: Env.get('DB_USER', 'devuser'),
+      password: Env.get('DB_PASSWORD', '123456'),
+      database: Env.get('DB_DATABASE', 'adonisblog')
     }
   }
 }

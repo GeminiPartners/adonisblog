@@ -19,9 +19,15 @@ var app     =   new Vue({
             this.login_alert_msg        =   'Please wait! Logging in'
 
             $.post( '/login', this.user_login ).then((response) => {
-                this.login_is_submitting    =   false;
-                this.login_alert_class      =   'infomsg';
-                this.login_alert_msg        =   'Please wait! 2nd method';
+                if( response.status === 2 ){
+                    this.login_alert_class  = 'successmsg';
+                    this.login_alert_mst    =   'Success! You are now being redirected!';
+                    location.href           =   '/';
+                }else{
+                    this.login_is_submitting=   false;
+                    this.login_alert_class  =   'errormsg';
+                    this.login_alert_msg    =   'Invalid login info!!'
+                }
             });
         }
     }

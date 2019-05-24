@@ -10,6 +10,10 @@ class UserSchema extends Schema {
       table.string('username', 80).notNullable().unique()
       table.string('email', 254).notNullable().unique()
       table.string('password', 60).notNullable()
+      table.string('profile_img').notNullable().defaultTo(
+        '/uploads/default.jpg'
+      )
+      table.string( 'bio', 255 )
       table.timestamps()
     })
   }
