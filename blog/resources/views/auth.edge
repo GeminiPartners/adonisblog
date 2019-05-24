@@ -74,30 +74,47 @@
                                     <div class="panel-body" style="padding: 40px;">
                                         <h3>Register for an Account</h3>
 
-                                        <form class="nobottommargin" action="#" method="post">
+                                            <div class="style-msg" 
+                                                :class="[reg_alert_class]"
+                                                v-if="reg_show_alert">
+												<div class="sb-msg">
+													@{{ reg_alert_msg }}
+												</div>
+											</div>
+
+                                        <form class="nobottommargin" @submit.prevent="register">
 											
                                             <div class="col_full">
                                                 <label>Email Address:</label>
-                                                <input type="text" class="form-control" />
+                                                <input type="text" class="form-control" 
+                                                    v-model="user_reg.email"
+                                                    :disabled="reg_is_submitting"/>
                                             </div>
 
                                             <div class="col_full">
                                                 <label>Choose a Username:</label>
-                                                <input type="text" class="form-control" />
+                                                <input type="text" class="form-control"  
+                                                v-model="user_reg.username"
+                                                :disabled="reg_is_submitting"/>
                                             </div>
 
                                             <div class="col_full">
                                                 <label>Choose Password:</label>
-                                                <input type="password" class="form-control" />
+                                                <input type="password" class="form-control"  
+                                                v-model="user_reg.password"
+                                                :disabled="reg_is_submitting"/>
                                             </div>
 
                                             <div class="col_full">
                                                 <label>Re-enter Password:</label>
-                                                <input type="password" class="form-control" />
+                                                <input type="password" class="form-control"  
+                                                v-model="user_reg.re_password"
+                                                :disabled="reg_is_submitting"/>
                                             </div>
 
                                             <div class="col_full nobottommargin">
-                                                <button class="button button-3d button-black nomargin">Register Now</button>
+                                                <button class="button button-3d button-black nomargin"
+                                                    :disabled="reg_is_submitting">Register Now</button>
                                             </div>
 
                                         </form>
