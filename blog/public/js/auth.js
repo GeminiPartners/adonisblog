@@ -8,8 +8,8 @@ var app     =   new Vue({
         },
         login_is_submitting:    false,
         login_show_alert:       false,
-        login_alert_class:      "",
-        login_alert_msg:        "",
+        login_alert_class:      '',
+        login_alert_msg:        '',
         user_reg: {
             _csrf:              $( 'input[name=_csrf' ).val(),
             email:              '',
@@ -19,8 +19,8 @@ var app     =   new Vue({
         },
         reg_is_submitting:    false,
         reg_show_alert:       false,
-        reg_alert_class:      "",
-        reg_alert_msg:        ""
+        reg_alert_class:      '',
+        reg_alert_msg:        ''
     },
     methods: {
         login: function(){
@@ -46,7 +46,7 @@ var app     =   new Vue({
             this.reg_is_submitting    =   true;
             this.reg_show_alert       =   true;
             this.reg_alert_class      =   'infomsg';
-            this.reg_alert_msg        =   'Please wait! Logging in'
+            this.reg_alert_msg        =   'Please wait! Registering'
 
             $.post( '/register', this.user_reg ).then((response) => {
                 if( response.status === 2 ){
